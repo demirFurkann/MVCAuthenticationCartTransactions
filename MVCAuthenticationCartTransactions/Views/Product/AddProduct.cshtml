@@ -1,0 +1,21 @@
+﻿@model AddUpdateProductPageVM
+@{
+    ViewBag.Title = "AddProduct";
+}
+
+@using (Html.BeginForm())
+{
+<div class="form-control">
+    @Html.TextBoxFor(x => x.Product.ProductName)
+</div>
+<div class="form-control">
+    @Html.TextBoxFor(x => x.Product.UnitPrice)
+</div>
+<div class="form-control">
+    @Html.DropDownListFor(x => x.Product.CategoryID,new SelectList(Model.Categories,"ID","CategoryName"),"Lütfen Seciniz")
+</div>
+<div class="form-control">
+    <button class="btn btn-primary">Ekle</button>
+</div>
+}
+

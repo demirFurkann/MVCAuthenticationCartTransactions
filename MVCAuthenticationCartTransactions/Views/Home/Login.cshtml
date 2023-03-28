@@ -1,0 +1,26 @@
+﻿@model LoginPageVM
+@{
+    ViewBag.Title = "Login";
+}
+<h1 style="color:maroon">@ViewBag.Message</h1>
+
+<div class="container">
+    @using (Html.BeginForm())
+    {
+<div class="form-control">
+    <h5>UserName</h5>
+    @Html.TextBoxFor(x => x.AppUser.UserName)
+</div>
+    <div class="form-control">
+        <h5>Password</h5>
+        @Html.PasswordFor(x => x.AppUser.Password)
+
+    </div>
+    <div class="form-control">
+        <button  class="btn btn-danger">
+            Giriş Yap
+        </button>
+    </div>
+    }
+</div>
+

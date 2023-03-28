@@ -1,0 +1,25 @@
+﻿@model AddUpdateCategoryPageVM
+@{
+    ViewBag.Title = "UpdateCategory";
+}
+
+<h2>UpdateCategory</h2>
+
+
+@using (Html.BeginForm())
+{
+
+     @Html.HiddenFor( x=> x.Category.ID)
+<div>
+    @Html.TextBoxFor(x => x.Category.CategoryName)
+</div>
+<div>
+    @Html.TextBoxFor( x=> x.Category.Description)
+</div>
+<div>
+    <button class="btn btn-dark">
+        Güncelle
+    </button>
+</div>
+}
+

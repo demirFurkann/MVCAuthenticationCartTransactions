@@ -1,0 +1,23 @@
+﻿@model AddUpdateCategoryPageVM
+@{
+    ViewBag.Title = "AddCategory";
+}
+
+<h2>AddCategory</h2>
+
+@using (Html.BeginForm())
+{
+<div>
+    @Html.TextBoxFor(x => x.Category.CategoryName, new { placeholder = "Lütfen Kategori İsmini Giriniz",@class = "form-control"  })
+       
+</div>
+<div>
+    @Html.TextBoxFor( x=> x.Category.Description,new {placeholder ="Lütfen Kategori Açıklamasını Giriniz",@class="form-control"})
+</div>
+<div>
+    <button class="btn btn-outline-warning"style="background-color:maroon">
+        Ekle
+    </button>
+</div>
+}
+
